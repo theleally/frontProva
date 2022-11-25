@@ -26,6 +26,15 @@ namespace api.Controllers
             return Created("", jogo);
         }
 
+        [Route("buscar/{id}")]
+        [HttpGet]
+        public IActionResult Buscar([FromRoute] int id)
+        {
+            Jogo jogo =
+                _context.Jogos.Find(id);
+            return jogo != null ? Ok(jogo) : NotFound();
+        }
+
         [HttpGet]
         [Route("listar")]
         public IActionResult Listar()
