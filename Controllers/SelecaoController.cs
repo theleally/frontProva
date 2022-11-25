@@ -22,6 +22,7 @@ namespace api.Controllers
             _context.SaveChanges();
             return Created("", selecao);
         }
+        
 
         [HttpGet]
         [Route("listar")]
