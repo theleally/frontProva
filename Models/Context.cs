@@ -9,5 +9,6 @@ namespace api.Models
 
         public DbSet<Selecao> Selecoes { get; set; }
         public DbSet<Jogo> Jogos { get; set; }
+        public DbSet<Palpite> Palpites { get; set; }
     }
 }
